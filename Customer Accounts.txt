@@ -1,0 +1,97 @@
+/******************************
+   Team Name: The Terminators
+   Due Date: 9-25-2019
+   File Name spc12-16.cpp
+   Description: Create a program that uses a structure to store and change customer account information with a menu drive interface.
+********************************/
+// Chapter 12, Programming Challenge 16: Customer Accounts
+// Headers
+#include <iostream>
+#include <cstdlib>
+#include <string>
+#include <fstream>
+#include <iomanip>
+using namespace std;
+
+
+// Constant for array sizes
+const int SIZE = 45;
+hello 
+fstream custFile;      // Customer file
+fstream tempFile;      // For deletion swap
+
+struct Customer
+{
+   char name[SIZE];
+   char address[SIZE];
+   char city[SIZE];
+   char state[SIZE];
+   char zip[SIZE];
+   char phone[SIZE];
+   double balance;
+   char lastPay[SIZE];
+};
+
+// Function prototypes
+void setInfo(long);     // write record to file
+void display(long);     // display one record
+long search();          // find a record & return file position
+void deleteRec(long);   // delete one record
+void showAll();         // display all records
+
+// flags to signal setInfo()
+bool rnew = false;      // To signal if the record is new  
+bool mod = false;       // To signal if the record is being modified
+
+int main()
+{
+
+
+   return 0;
+}
+
+// *****************************************************************
+// The setInfo function write record to the file.                  *
+// *****************************************************************
+void setInfo(long fp)  
+{
+   
+
+} 
+// *****************************************************************
+// The display function displays a single record.                  *
+// *****************************************************************
+void display(long fp)
+{
+
+}
+
+// *****************************************************************
+// The search function returns the file pointer position.          *
+// *****************************************************************
+long search()
+{
+
+}
+
+// *****************************************************************
+// The showAll function shows all the customer records.            *
+// *****************************************************************
+void showAll()
+{  
+
+}
+
+// *****************************************************************
+// This function marks a record for deletion by placing            *
+// the null terminator at the beginning of the name member.        *
+// The contents of the file are then copied to a temporary file,   *
+// then the temporary file is copied back to the Customer file     *
+// -- without the deleted record.                                  *
+// Ideally, this function would be expanded to allow multiple      *
+// record deletions before the final file swap takes place.        *
+// *****************************************************************
+void deleteRec(long fp)
+{
+  
+}
