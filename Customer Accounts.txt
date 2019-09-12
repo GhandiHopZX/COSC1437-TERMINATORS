@@ -1,41 +1,47 @@
 /******************************
-   Team Name: The Terminators
-   Due Date: 9-25-2019
+   Team Name:The Terminators
+   Date: 9-25-2019
    File Name spc12-16.cpp
-   Description: Create a program that uses a structure to store and change customer account information with a menu drive interface.
+   Description:
+Your group project is on page 717, assignment number 16 - Customer Accounts.
+You will use the starter template that I have provided below to design and write this project.
+You should each take on approximately the same workload while writing this project.
+Please use your team name in the comment block of the project.
+IMPORTENT! Please make sure to include comments and make sure to tag your initials in the comment blocks next to code that you've written.
 ********************************/
 // Chapter 12, Programming Challenge 16: Customer Accounts
 // Headers
+#include"pch.h"
 #include <iostream>
 #include <cstdlib>
 #include <string>
 #include <fstream>
 #include <iomanip>
+#include <cmath>
 using namespace std;
 
 
 // Constant for array sizes
 const int SIZE = 45;
-hello 
+
 fstream custFile;      // Customer file
 fstream tempFile;      // For deletion swap
-
 struct Customer
 {
-   char name[SIZE];
-   char address[SIZE];
-   char city[SIZE];
-   char state[SIZE];
-   char zip[SIZE];
-   char phone[SIZE];
-   double balance;
-   char lastPay[SIZE];
+	char name[SIZE];
+	char address[SIZE];
+	char city[SIZE];
+	char state[SIZE];
+	char zip[SIZE];
+	char phone[SIZE];
+	double balance;
+	char lastPay[SIZE];
 };
 
 // Function prototypes
 void setInfo(long);     // write record to file
 void display(long);     // display one record
-long search();          // find a record & return file position
+long search(Customer);          // find a record & return file position binary search
 void deleteRec(long);   // delete one record
 void showAll();         // display all records
 
@@ -45,19 +51,19 @@ bool mod = false;       // To signal if the record is being modified
 
 int main()
 {
-
-
-   return 0;
+	system("PAUSE");
+	cout << "" << endl;
+	return 0;
 }
 
 // *****************************************************************
 // The setInfo function write record to the file.                  *
 // *****************************************************************
-void setInfo(long fp)  
+void setInfo(long fp)
 {
-   
 
-} 
+
+}
 // *****************************************************************
 // The display function displays a single record.                  *
 // *****************************************************************
@@ -69,8 +75,43 @@ void display(long fp)
 // *****************************************************************
 // The search function returns the file pointer position.          *
 // *****************************************************************
-long search()
+long search(Customer personel[])
 {
+	// search variables
+	int firstName;
+	int lastName;
+	int middleName;
+	int value;
+	bool found // flag for finding
+	int position // place on list
+
+	// loading each value for the search variables
+	for (size_t i = 0; i < personel; i++)
+	{
+		firstName += 1;
+		lastName += 1;
+	}
+
+	while (!found && firstName <= lastName)
+	{
+		middleName = (firstName + lastName) / 2;
+		if (personel[middleName] == value)
+		{
+			found = true;
+			position = middle;
+		}
+		else if (personel > value)
+		{
+			lastName = middleName - 1;
+		}
+		else
+		{
+			firstName = middleName + 1;
+		}
+		return position;
+	}
+
+	
 
 }
 
@@ -78,7 +119,7 @@ long search()
 // The showAll function shows all the customer records.            *
 // *****************************************************************
 void showAll()
-{  
+{
 
 }
 
@@ -93,5 +134,5 @@ void showAll()
 // *****************************************************************
 void deleteRec(long fp)
 {
-  
+
 }
